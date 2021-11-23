@@ -1,0 +1,24 @@
+{% extends 'template.html.twig' %}
+{% block title %} Details {% endblock %}
+{% block body %}
+   <h1>Details ticket </h1>
+    <hr>
+    <div class="row">
+        {% if ticket %}
+            <div class="card col-3 m-2">
+                <div class="card-body">
+                    <h3 class="card-title">{{ ticket.id }} </h3>
+                    <h5 class="card-subtitle">{{ ticket.titre }}</h5>
+                    <h6 class="card-subtitle">{{ ticket.nom }}</h6>
+                    <h6 class="card-subtitle">{{ ticket.discription }}</h6>
+                    <p class="card-text">{{ ticket.statut }}</p>
+                    <p class="card-text">{{ ticket.dateCr }}</p>
+
+                </div>
+
+                 </div>
+
+        {% endif %}
+    </div>
+    <button class="btn btn-success" type="submit"><a href="/" style="color: white">Retour</a></button>
+{% endblock %}
